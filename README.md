@@ -211,14 +211,14 @@ must convert visitors to sign-ups with a compelling above-the-fold hero.
 pytest tests/ -v
 ```
 
-120 tests covering all modules:
+124 tests covering all modules:
 
 | File | Tests | Covers |
 |------|-------|--------|
-| `tests/test_scorer.py` | 35 | All 5 scoring dimensions, caps, empty input, unicode, edge cases |
-| `tests/test_utils.py` | 37 | Section parsing, final prompt extraction, diff generation, file I/O |
+| `tests/test_scorer.py` | 42 | All 5 scoring dimensions, caps, empty input, unicode, edge cases |
+| `tests/test_utils.py` | 28 | Section parsing, final prompt extraction, diff generation, file I/O |
 | `tests/test_compiler.py` | 14 | Input validation, model passthrough, error propagation |
-| `tests/test_llm.py` | 34+ | Token resolution, fallback chain, auth errors, temperature clamping |
+| `tests/test_llm.py` | 40 | Token resolution, fallback chain, auth errors, temperature clamping |
 
 ---
 
