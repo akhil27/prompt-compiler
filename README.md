@@ -261,11 +261,3 @@ prompt-compiler/
 
 **Speeds up development.** For developers building LLM-powered apps, the compiled prompt can be dropped directly into a system message. The JSON export (`outputs/*.json`) is structured for programmatic consumption.
 
----
-
-## Roadmap
-
-- **Multi-agent refinement** — Run compiled output through a critique agent and a revision agent in a feedback loop
-- **Prompt benchmarking** — Test a compiled prompt across all model tiers and surface a quality comparison table
-- **Prompt compression** — Reduce token count of complex templates without losing structural clarity
-- **Snapshot history** — Store and diff named iterations of the same base prompt over time
