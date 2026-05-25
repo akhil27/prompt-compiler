@@ -2,8 +2,6 @@
 
 > Turn vague ideas into production-ready LLM instructions — free, instant, no account required beyond a Hugging Face token.
 
-![Prompt Compiler UI](assets/screenshot.png)
-
 ---
 
 ## What It Does
@@ -33,7 +31,7 @@ You get back a complete, structured prompt template — with an expert persona, 
 
 ![prompt-compiler input panel](assets/screenshots/screenshot1.PNG)
 ![compiled output panel](assets/screenshots/screenshot2.PNG)
-![json output view](assets/screenshot3.PNG)
+![json output view](assets/screenshots/screenshot3.PNG)
 
 ---
 
