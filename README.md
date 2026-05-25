@@ -29,9 +29,11 @@ You get back a complete, structured prompt template — with an expert persona, 
 
 ---
 
-## Screenshot
+## Screenshots
 
-![App screenshot showing dark UI with prompt input on left and structured output on right](assets/screenshot.png)
+![prompt-compiler input panel](assets/screenshots/screenshot1.PNG)
+![compiled output panel](assets/screenshots/screenshot2.PNG)
+![json output view](assets/screenshot3.PNG)
 
 ---
 
