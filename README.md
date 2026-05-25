@@ -18,7 +18,7 @@ You get back a complete, structured prompt template — with an expert persona, 
 
 - **Intent inference** — Expands 2–6 word inputs into fully-specified prompt templates without guessing or hedging
 - **Structured output** — Every compiled prompt has GOAL, CONTEXT, CONSTRAINTS, TECH STACK, EDGE CASES, OUTPUT FORMAT, and FINAL OPTIMIZED PROMPT sections
-- **Three output views** — Rendered markdown, copyable agent prompt, and raw JSON spec (with built-in code block copying)
+- **Four output views** — Rendered markdown, copyable agent prompt, raw JSON spec, and a local quality score breakdown
 - **Auto-fallback models** — If the primary model is rate-limited, the app silently retries the next free-tier model and shows a badge
 - **Five quick examples** — Click any chip to instantly fill the input and compile
 - **Free tier only** — Uses Hugging Face Router with no paid API; all inference is free
@@ -32,6 +32,7 @@ You get back a complete, structured prompt template — with an expert persona, 
 ![prompt-compiler input panel](assets/screenshots/screenshot1.PNG)
 ![compiled output panel](assets/screenshots/screenshot2.PNG)
 ![json output view](assets/screenshots/screenshot3.PNG)
+![heuristic scorer panel](assets/screenshots/screenshot4.PNG)
 
 ---
 
@@ -57,7 +58,7 @@ User Input (vague prompt)
         │
         ▼
 ┌───────────────┐   scorer.py  → local heuristic score (0–100)
-│    app.py     │   Streamlit UI: 3 tabs, model selector pill/badge
+│    app.py     │   Streamlit UI: 4 tabs, model selector pill/badge
 └───────────────┘
 ```
 
@@ -69,7 +70,7 @@ User Input (vague prompt)
 | 2. Compile | `compiler.py` | Wraps input in structured user message with `COMPILER_SYSTEM_PROMPT` |
 | 3. LLM call | `llm.py` | Sends to HF Router; retries fallback models on 429/503 |
 | 4. Parse | `utils.py` | Splits markdown response into keyed section dict |
-| 5. Display | `app.py` | Renders across 3 tabs with model selector pill/badge |
+| 5. Display | `app.py` | Renders across 4 tabs with model selector pill/badge |
 | 6. Save | `utils.py` | Writes `.json`, `.md`, `.txt` to `outputs/` |
 
 ---
@@ -241,7 +242,11 @@ prompt-compiler/
 │   ├── test_compiler.py
 │   └── test_llm.py
 └── assets/
-    └── screenshot.png
+    └── screenshots/
+        ├── screenshot1.PNG
+        ├── screenshot2.PNG
+        ├── screenshot3.PNG
+        └── screenshot4.PNG
 ```
 
 ---
